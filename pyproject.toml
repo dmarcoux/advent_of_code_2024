@@ -1,0 +1,35 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[project]
+name = "advent_of_code_2024"
+version = "0.1.0"
+description = "Solving the problems from Advent of Code 2024 with Python"
+keywords = ["advent_of_code"]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Repositorty = "https://github.com/dmarcoux/advent_of_code_2024"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "ruff>=0.7.2",
+]
+
+# Configure pytest
+# https://docs.pytest.org/en/stable/reference/customize.html
+# https://docs.pytest.org/en/stable/reference/reference.html#ini-options-ref
+[tool.pytest.ini_options]
+pythonpath = [
+    "src",
+]
+testpaths = [
+    "tests/advent_of_code_2024",
+]
