@@ -20,11 +20,7 @@ def solve(puzzle_input: str) -> tuple[int, int]:
     return part1(data), part2(data)
 
 
-def main() -> str:
-    puzzle_input = (pathlib.Path(__file__).parent / "day_template_input.txt").read_text().strip()
-    solutions = solve(puzzle_input)
-    return "\n".join(str(solution) for solution in solutions)
-
-
 if __name__ == "__main__":
-    main()
+    puzzle_input = (pathlib.Path(__file__).parent / "day_template_input.txt").read_text().strip()
+    part1_solution, part2_solution = solve(puzzle_input)
+    print(f"day_template\npart_1: {part1_solution}\npart_2: {part2_solution}")  # noqa: T201
